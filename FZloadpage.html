@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN / SIGNUP</title>
+    <link rel="icon" href="../IMAGES/book_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../MY_MINI_PROJECTS_IDEAS/FZ.css">
+    <script type = "text/javascript" src = "../JQUERY STUFF/jquery.min.js"></script>
+    <script src="../JQUERY STUFF/jquery-ui/jquery-ui.js"></script>
+    <link href="../JQUERY STUFF/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa158748e7.js" crossorigin="anonymous"></script>
+    <style>
+        .load-container {
+            display:flex;
+            text-align: center;
+            margin-left:800px;
+        }
+        .circle{
+            height:15px;
+            width:15px;
+            border-radius: 50%;
+            margin:3px;
+            animation:loader .6s ease-in-out infinite;
+        }
+        .circle:nth-child(1){
+            animation-delay: .1s;
+        }
+        .circle:nth-child(2){
+            animation-delay: .2s;
+        }
+        .circle:nth-child(3){
+            animation-delay: .3s;
+        }
+        @keyframes loader {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(0px, -20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        .loginform {
+    width:400px;
+    height: 400px;
+    margin: 20px 620px;
+    border-radius: 15%;
+    background: linear-gradient(125deg, #ffdc62, #7dded8, #ff8cd9, #ffdc62);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:105%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    width:211px;
+    height:34px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color:black;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+input{
+    margin-top: 15px;
+    box-sizing: border-box;
+    font-family: 'Ebrima';
+    font-weight: bold;
+    width:326px;
+    height:30px;
+    background: white;
+    border:1px solid #00000000;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 25px;
+    transition: all 0.5s;
+    padding-left: 5%;
+    color:black;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px #03b506;
+}
+
+input:hover {
+    box-shadow: 0px 0px 15px  #dc0303;
+}
+
+.signhide {
+    display: none;
+    margin-top:30px;
+}
+.finalbtn {
+    width: 170px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:rgb(107, 198, 244);;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+    </style>
+</head>
+<body>
+    <img src="../IMAGES/book_logo1.png" width="600px" style="margin-left: 500px;">
+    <div class="load-container">
+        <div class="circle" style="background: #3bfff2;"></div>
+        <div class="circle" style="background: #ff2db9"></div>
+        <div class="circle" style="background: #ffce1b;"></div>
+    </div>
+
+    <div class="details"style="display: none; margin-top:20px">
+
+        <div class="buttons" style="display: flex;margin-left: 650px; top:10px;">
+            <button type="button"class="loginbtn" style="border: 2px solid #FF8CD9;"><a href="#" class="a-btn">LOG IN</button></a>
+            <button type="button"class="signnbtn" style="border: 2px solid #ffdc62;"><a href="#" class="a-btn">SIGN UP</button></a>
+        </div>
+
+        <div class="loginform">
+            <form>
+        <label for="groupmembers"class="signhide">FULL NAME:</label>
+        <input type="text" class="signhide">
+
+        <label for="groupmembers">E-MAIL:</label>
+        <input type="text" id="email">
+
+        <label for="groupmembers">PASSWORD:</label>
+        <input type="password"id=password>
+
+        <div class="buttons">
+            <button type="button"class="finalbtn" style="margin-top: 10px;"><a href="../MY_MINI_PROJECTS_IDEAS/FZ.html" class="a-btn">LOG IN</button></a>
+        </div>
+                </form>
+                </div>
+    <script type="text/javascript">
+
+        function toFade() {
+            $(".circle").delay(5000).fadeOut(800)
+            $(".details").fadeIn(5000)
+        }
+        $(document).ready(toFade())
+
+        $(".signnbtn").click(function() {
+            $(".signhide").fadeIn(1000)
+            $(".finalbtn").html("SIGN UP")
+        }) 
+         
+        $(".loginbtn").click(function() {
+            $(".signhide").fadeOut(1000)
+            $(".finalbtn").html("LOG IN")
+        })
+        </script>
+</body>
+</html>

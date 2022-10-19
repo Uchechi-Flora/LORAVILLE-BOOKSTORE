@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>READING GROUP</title>
+    <link rel="icon" href="../IMAGES/book_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../MY_MINI_PROJECTS_IDEAS/FZ.css">
+    <script type = "text/javascript" src = "../JQUERY STUFF/jquery.min.js"></script>
+    <script src="../JQUERY STUFF/jquery-ui/jquery-ui.js"></script>
+    <link href="../JQUERY STUFF/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa158748e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="group-nav">
+        <a href="../MY_MINI_PROJECTS_IDEAS/FZ.html"><img src="../IMAGES/book_logo.png" class="group-logo"></a>
+    </nav>
+
+    <div class="heading">
+    <!-- GROUP ICON HERE, at the center, the space between reading and group below-->
+    <i class="fa-sharp fa-solid fa-2x fa-people-group" style="margin-left:55px;"></i>
+    <h2 class="group-heading">READING GROUP</h2>
+    </div>
+
+    <div class="thetext">
+    <h3 class="group-text">You are not in any reading group</h3>
+    <div class="buttons">
+    <button type="button"class="mybtn"><span class="btn-span"></span><a href="#" class="a-btn"><!--PLUS ICON HERE-->CREATE ONE</button></a>
+    </div>
+
+    <div class="create-box">
+        <div class="textbox">
+            <input type="text" id="grouptitle" required="required">
+            <span>GROUP TITLE</span>
+            <i></i>
+       </div>
+
+       <div class="create-form">
+       <form>
+        <p class="members-text" style="margin-top: 10px;">ADD MEMBERS BY EMAIL:</p>
+        <input type="text" class="groupmemb">
+
+        <label for="groupmembers"></label>
+        <input type="text" class="groupmemb">
+
+        <label for="groupmembers"></label>
+        <input type="text" class="groupmemb">
+
+        <label for="groupmembers"></label>
+        <input type="text" class="groupmemb">
+
+        <label for="groupmembers"></label>
+        <input type="text" class="groupmemb">
+
+        <div class="buttons">
+            <button type="button"class="createbtn"><a href="#" class="a-btn"><!--PLUS ICON HERE-->CREATE</button></a>
+        </div>
+
+        </form>
+        <p style="font-size: 12px; font-family:'Garamond'; margin-bottom:8px;"><strong> GO PREMIUM TO HAVE MORE THAN 5 MEMBERS IN YOUR GROUP</strong></p>
+    </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript"> 
+        $(".create-box").hide()
+            $(".mybtn").click(function() {
+            $(".create-box").show()
+        })
+    </script>
+</body>
+</html>

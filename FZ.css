@@ -1,0 +1,350 @@
+/*FOR THE MAIN PAGE; INSIDE MENU*/
+body {
+    margin:auto;
+    overflow-x: hidden;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .content {
+    transform: translateX(200px);
+}
+.nav-open .footer {
+    transform: translateX(0px);
+}
+
+.nav-open .frame1 {
+    transform: translateX(0px);
+}
+.nav-open .frame2 {
+    transform: translateX(0px);
+}
+.nav-open .book-container, .book-container2, .book-container3 {
+    width:430px;
+}
+.nav-open .book-container4, .book-container5, .book-container6 {
+    width:430px;
+}
+.nav {
+    width:200px;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: linear-gradient(200deg, rgba(125, 222, 216, 1), rgba(255, 140, 217, 1), rgba(255, 200, 98, 1), rgba(125, 222, 216, 1));
+    /*background: linear-gradient(150deg, #75efe7, #fe68cc, white);*/
+    transform: translateX(-200px);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.nav-close {
+    background: none;
+    border:none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 15px 25px;
+    cursor:pointer;
+}
+.nav-container {
+    box-shadow: 0 -10px 10px #4444;
+}
+
+.nav-links {
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color:black;
+    padding: 15px 25px;
+    margin-top: 50px;
+    
+}
+
+.nav-text {
+    font-size: 22px;
+    font-family: 'Ebrima';
+    font-weight: 500;
+}
+
+.nav-links:hover,
+.nav-close:hover {
+    background: rgba(36, 215, 203, 0.451);
+}
+
+/* MAIN PAGE; OUTSIDE MENU*/
+.signupbtn {
+    position: fixed;
+    float:right; 
+    margin-right: 350px;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:transparent;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+
+
+/* FOR READING GROUP PAGE */
+.group-logo {
+    margin-left: 30px;
+    margin-top: 10px;
+    width:110px;
+}
+.heading {
+    text-align: center;
+}
+.thetext {
+    text-align: center;
+    margin-top:90px;
+}
+.group-heading {
+    font-size: 32px;
+    letter-spacing: 0.8em;
+    font-family: "Forte";
+}
+.group-text {
+    font-size: 25px;
+    font-family:"Garamond";
+}
+.a-btn {
+    text-decoration: none;
+    color: black;
+    font-family:"Garamond"
+}
+.mybtn{
+    width: 170px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:transparent;
+    color:white;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+.btn-span{
+    background: linear-gradient(100deg, rgba(125, 222, 216, 1), rgba(255, 140, 217, 1), rgba(255, 200, 98, 1), rgba(125, 222, 216, 1));
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.7s;
+}
+.buttons:hover span {
+    width:100%;
+}
+.buttons:hover {
+    border:none;
+}
+
+.create-box {
+    display: flex;
+    margin-left:600px;
+    margin-top:50px;
+    justify-content: center;
+    align-items: center;
+    font-family:"Garamond";
+    flex-direction: column;
+    background: linear-gradient(125deg, #ffdc62, #7dded8, #ff8cd9, #ffdc62);
+    border-radius: 15%;
+    width:500px;
+    height: 500px;
+}
+
+.textbox{
+    position: relative;
+    width:250px;
+}
+.textbox #grouptitle{
+    width: 80%;
+    background: transparent;
+    color: black;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.textbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px 0 5px;
+    color: black;
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+.textbox input:valid ~ span,
+.textbox input:focus ~ span
+{
+    color: #2196f3;
+    transform: translateY(-16px);
+    font-size: 0.65em;
+}
+
+.textbox i {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height:2px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.textbox i::before{
+    content: '';
+    left: -100%;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff1b69, #ffdc62, #ff1b69);
+    animation: animate 2s linear infinite;
+    transition: 0.5s;
+}
+
+.textbox input:valid ~ i::before,
+.textbox input:focus ~ i::before
+{
+    left: 0;
+}
+
+@keyframes animate
+{
+0%{background-position-x: 0;}
+
+100%{background-position-x: 250px;}
+}
+
+input{
+    box-sizing: border-box;
+    font-family:"Garamond";
+    font-weight: bold;
+    width:326px;
+    height:35px;
+    background: white;
+    border:1px solid #00000000;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 25px;
+    transition: all 0.5s;
+    padding-left: 5%;
+    color:black;
+    margin-top: 20px;
+    }
+    
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 15px #03b506;
+    }
+    
+input:hover {
+    box-shadow: 0px 0px 15px  #dc0303;
+    }
+
+label {
+    width:211px;
+    height:34px;
+    color:white;
+}     
+  
+.createbtn {
+    width: 170px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:rgb(107, 198, 244);
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+
+
+/* FOR THE LOG-IN AND SIGN-UP PAGE*/
+
+.loginbtn {
+    width: 170px;
+    justify-content: space-between;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0px 7px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:transparent;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+.signnbtn {
+    width: 170px;
+    justify-content: space-between;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0px 7px;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid rgb(107, 198, 244);
+    background:transparent;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+    
+}
+/*FOOTER*/
+footer {
+    background: rgb(107, 198, 244);
+    position: relative;
+    /*bottom: 0; */
+    top: 20px;
+    width: 100%;
+    height:100px;
+    padding: 3px;
+    color: white;
+}
+
+.footer-container ul li {
+    display: inline-block;
+    justify-content: space-between;
+    text-decoration: none;
+    color:white;
+    margin-left:130px;
+    margin-top: 10px;
+    padding: 15px 25px;
+    list-style: none;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    z-index: 0;
+}
+.footer-container ul li a:hover {
+    box-shadow: 0px 0px 50px  #ff2530;
+}

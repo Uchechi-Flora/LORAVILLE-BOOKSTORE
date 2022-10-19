@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FZ BOOKS</title>
+    <link rel="icon" href="../IMAGES/book_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../MY_MINI_PROJECTS_IDEAS/FZ.css">
+    <script type = "text/javascript" src = "../JQUERY STUFF/jquery.min.js"></script>
+    <script src="../JQUERY STUFF/jquery-ui/jquery-ui.js"></script>
+    <link href="../JQUERY STUFF/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa158748e7.js" crossorigin="anonymous"></script>
+    <style>
+        .checked {
+            color:orange;
+        }
+        .welcome-text {
+            font-family: "Forte";
+            letter-spacing: 0.2em;
+            font-size:20px;
+        }
+        .book-container{
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book1.png");
+            background-size: 450px;
+            display: flex;
+            width:470px;
+            margin-left: 40px;
+        }
+        .book-text {
+          padding: 5px;
+          margin:45px 0px 0px 10px;
+          color:white;
+          font-weight: 600;
+          font-family: 'ebrima';
+        }
+        .book-btn {
+          margin-left: 100px;
+          margin-top: 110px;
+        }
+        .lib-btn {
+            width:130px;
+            padding:8px;
+           /* border: 2px solid #FF8CD9;*/
+            background: linear-gradient(125deg, #7dded8, #ff8cd9, #ffdc62);
+            border-radius: 27px;
+            font-family: "Garamond";
+        }
+        .lib-btn:hover {
+            box-shadow: 0px 0px 15px  #e433a9;
+        }
+        .lib-btn:focus {
+            box-shadow: 0px 0px 15px  #33e439;
+        }
+
+        .book-container2 {
+            display:flex;
+            width:470px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book2.png");
+            background-size: 450px;
+            margin-left:20px;
+        }
+        .book-container3 {
+            display:flex;
+            width:470px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book3.png");
+            background-size: 450px;
+            margin-left:20px;
+        }
+
+        .book-container4 {
+            display:flex;
+            width:470px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book4.png");
+            background-size: 450px;
+            margin-left:40px;
+        }
+        .book-container5 {
+            display:flex;
+            width:470px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book5.png");
+            background-size: 450px;
+            margin-left:20px;
+        }
+        .book-container6 {
+            display:flex;
+            width:470px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../IMAGES/book6.png");
+            background-size: 450px;
+            margin-left:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--INSIDE NAV MENU   class="nav-open"-->
+
+    <nav class="nav">
+        <button type="button" class="nav-close"><i class="fa-solid fa-2x fa-xmark"></i></button>
+       
+
+        <div class="nav-container">
+            <a href="#" class="nav-links">
+                <span class="nav-text">MY LIBRARY</span>
+                <i class="fa-solid fa-book"></i>
+            </a>
+
+            <a href="./FZ_readinggroup.html" class="nav-links">
+                <span class="nav-text">READING GROUPS</span>
+                <i class="fa-sharp fa-solid fa-people-group"></i>
+            </a>
+
+            <a href="./FZpremuim.html" class="nav-links">
+                <span class="nav-text">PREMIUM CONTENT</span>
+                <i class="fa-solid fa-crown"></i>
+            </a>
+            <hr>
+            <a href="./FZfaq.html" class="nav-links">
+                <span class="nav-text">FAQ</span>
+                <i class="fa-sharp fa-solid fa-question"></i>
+            </a>
+            <a href="#" class="nav-links">
+                <span class="nav-text">CONTACT US</span>
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!--MAIN BODY; should contain the button to open the inside menu, log-in, sign-up.....-->
+    <main class="content">
+           
+        <div class="first-nav">
+            <i class="fa-solid fa-bars" onclick="toggleNav()"style="margin:25px 0px 0px 10px;"></i></button>
+        </div>
+
+        <!--
+        <div style="float:right; margin-right:110px">
+            <h3 class="welcome-text">WELCOME FLORA!!!</h3>
+        </div> -->
+        <div style="text-align: center";>
+        <img src="../IMAGES/book_logo1.png" style="margin-left:200px; margin-top:50px">
+    </div>
+
+    <!--THIS IS FOR THE BOOK SHELF-->
+    <div style="margin-left: 60px;">
+    <div class="frame1"  style="display:inline-flex;">
+        <div class="book-container">
+
+            <div class="image">
+                <img src="../IMAGES/book1.png" id="book1" width="140px" style="margin:35px 0px 5px 10px">
+            </div>
+            <div class="book-text">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>What lies after the death of her loved one, Maggie is expected to move on for the sake her kids and the situation her family is in. What could be Maggie's next chapter</p>
+
+                <div class="book-btn">
+                    <button class="lib-btn">ADD TO LIBRARY</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="book-container2">
+
+            <div class="image">
+                <img src="../IMAGES/book2.png" id="book2" width="140px" style="margin:35px 0px 5px 10px">
+            </div>
+            <div class="book-text">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>The Jansire kingdom has been placed on an everlasting curse as some would think. It takes the blood of an innocent girl to cleanse the land, one in which no one is willing to sacrifice</p>
+
+                <div class="book-btn">
+                    <button class="lib-btn">ADD TO LIBRARY</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="book-container3">
+
+            <div class="image">
+                <img src="../IMAGES/book3.png" id="book3" width="140px" style="margin:35px 0px 5px 10px">
+            </div>
+            <div class="book-text">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p>What better way to live life and enjoy each moment to the fullest by loving yourself, but what are the dangers that lie ahead and how many secrets are you willing to keep for that life</p>
+
+                <div class="book-btn">
+                    <button class="lib-btn">ADD TO LIBRARY</button>
+                </div>
+                
+            </div>
+        </div>
+</div>
+
+<div class="frame2"  style="display:inline-flex; margin-top: 10px;">
+    <div class="book-container4">
+
+        <div class="image">
+            <img src="../IMAGES/book4.png" id="book4" width="140px" style="margin:35px 0px 5px 10px">
+        </div>
+        <div class="book-text">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-regular fa-star"></i>
+            <p>Do you want to learn about robotics and machine stuff</p>
+
+            <div class="book-btn" style="margin-top:177px">
+                <button class="lib-btn">ADD TO LIBRARY</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="book-container5">
+
+        <div class="image">
+            <img src="../IMAGES/book5.png" id="book5" width="140px" style="margin:35px 0px 5px 10px">
+        </div>
+        <div class="book-text">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <p>Take a walk with Mercy in the park, and beg her so you can stay alive, she's swwet, sour, spicy whatever version you want her to be, depending on your offers</p>
+
+            <div class="book-btn">
+                <button class="lib-btn">ADD TO LIBRARY</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="book-container6">
+
+        <div class="image">
+            <img src="../IMAGES/book6.png" id="book6" width="140px" style="margin:35px 0px 5px 10px">
+        </div>
+        <div class="book-text">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <p>After the last war, Janelle returns to an empty home and then realizes that her family has been replaced, but by who?</p>
+
+            <div class="book-btn"style="margin-top:160px">
+                <button class="lib-btn">ADD TO LIBRARY</button>
+            </div>
+            
+        </div>
+    </div>
+
+    </div>
+</div>
+    <footer class="footer">
+        <div class="footer-container">
+            <ul class="icons">
+                <li><a href="https://github.com/Uchechi-Flora"><i class="fa-brands fa-2x fa-github" style="color: white;" ></i></a></li>
+                <li><a href="https://www.linkedin.com/in/nwokocha-flora-936a4b21b"><i class="fa-brands fa-2x fa-linkedin" style="color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-2x fa-twitter" style="color: white;"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-2x fa-envelope" style="color: white;"></i></a></li>
+            </ul>
+        </div>
+</footer>
+    </main>
+    <script type="text/javascript" src="../MY_MINI_PROJECTS_IDEAS/FZ.js">
+        function toggleNav() {
+    document.body.classList.toggle("nav-open");
+}
+document.querySelector(".nav-close").addEventListener("click", () => {
+    toggleNav();
+})
+    </script>
+</body>
+</html>
